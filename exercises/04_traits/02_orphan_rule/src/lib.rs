@@ -4,8 +4,13 @@
 //  Look at the compiler error to get familiar with what it looks like.
 //  Then delete the code below and move on to the next exercise.
 
-impl PartialEq for u32 {
+
+// to solve this we can have our own version of teh u32
+struct MyU32(u32);
+
+
+impl PartialEq for MyU32 {
     fn eq(&self, _other: &Self) -> bool {
-        todo!()
+        self == _other
     }
 }
